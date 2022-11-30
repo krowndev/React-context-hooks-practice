@@ -6,8 +6,8 @@ export const ThemeContext = createContext();
 class ThemeContextProvider extends Component {
     state = { 
         isLightTheme:true,
-        light: {syntax: '#555',ui:'#ddd',bg:'#eee'},
-        dark: {syntax: '#ddd',ui:'333',bg:'555'}
+        light: {syntax: ' text-dark ',ui:'navbar-light',bg:'bg-light'},
+        dark: {syntax: 'text-light',ui:'navbar-dark',bg:'bg-dark'}
      } 
     render() { 
         return (

@@ -5,8 +5,12 @@ class Navbar extends Component {
     static contextType  = ThemeContext
     state = {  } 
     render() { 
+        const {isLightTheme,light,dark} = this.context
+        const theme = isLightTheme ? light : dark
+
+
         return (
-            <nav className="navbar mx-5 my-3 shadow navbar-expand-lg bg-light">
+            <nav style={{}} className={`${theme.ui}  ${theme.bg}  navbar  mx-5 my-3 shadow navbar-expand-lg `}>
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/#">Navbar</a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
