@@ -2,19 +2,20 @@ import { useEffect, useState } from 'react'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.js'
+import Navbar from './components/Navbar';
+import BooksList from './components/Booklist';
+import ThemeContextProvider from './context/ThemeContext';
+
+
 
 function App() {
  
   return (
     <div className="App">
-      <header className="App-header">
-
-        <h1>all blogs</h1>
-          <div className="container bg-warning  ">
-            testing bootstrap
-          </div>
-       
-      </header>
+      <ThemeContextProvider>
+        <Navbar />
+        <BooksList />
+      </ThemeContextProvider>
     </div>
   );
 }
