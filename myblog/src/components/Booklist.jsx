@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React, { useContext} from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
-class BooksList extends Component {
-    static contextType = ThemeContext
-    state = {  } 
-    render() { 
-        const {isLightTheme,light,dark} = this.context
+const BookList = () => {
+    const {isLightTheme,light,dark} = useContext(ThemeContext)
         const theme = isLightTheme ? light : dark
-        return (
-            <div className={`container ${theme.syntax} my-5`}>
+
+
+    return ( 
+        <div className={`container ${theme.syntax} my-5`}>
                 <div className={`${theme.bg}    card shadow m-3`}>
                     <div className={` card-body`}>
                         Book1
@@ -25,8 +24,7 @@ class BooksList extends Component {
                     </div>
                 </div>
             </div>
-        );
-    }
+     );
 }
  
-export default BooksList;
+export default BookList;

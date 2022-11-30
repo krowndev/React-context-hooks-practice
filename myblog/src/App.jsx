@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.js'
 import Navbar from './components/Navbar';
 import BooksList from './components/Booklist';
 import ThemeContextProvider from './context/ThemeContext';
+import ToggleTheme from './components/ThemeToggle';
 
 
 
@@ -13,8 +14,9 @@ function App() {
   return (
     <div className="App">
       <ThemeContextProvider>
-        <Navbar />
+        <Navbar />  
         <BooksList />
+        <ToggleTheme /> 
       </ThemeContextProvider>
     </div>
   );
